@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marcela Estrada | Programming: Cat Wars</title>
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="shortcut icon" href="../img/wizardME.png">
+
+
+
+</head>
+
+<body>
+  <div class="parallelBunny">
+    <div class="icon"><a href="../index.html">
+        <img src="../img/wizardME.png">
+      </a>
+    </div>
+  </div>
+  <div class="body">
+
+    <header>
+
+      <!-- <div class="icon"><a href="../index.html">
+          <img src="../img/wizardME.png">
+        </a>
+      </div> -->
+
+      <nav>
+        <ul>
+          <li><a href="../aboutMe.html">about me</a></li>
+          <li><a href="../programming.html">programming</a></li>
+
+          <li><a href="../illustration.html">design and illustration</a></li>
+          <li><a href="../contact.html">contact</a></li>
+
+        </ul>
+      </nav>
+
+    </header>
+    <div class="container">
+
+      <div class="arrows">
+        <a href="" title="Red Pandamanium">
+          <p>
+            < </p>
+        </a>
+        <p class="arrowsTitle">programming projects</p>
+        <a href="" title="Best Friend Path">
+          <p> > </p>
+        </a>
+      </div>
+
+      <div class="programSummary">
+        <p id="projectTitle">Cat Wars</p>
+        <p class="projectSub">Java</p>
+        <p>Cat Wars is an ongoing turn-based game, where two users choose a player. There is error checking so that users don't play the same player.</p>
+        <a href="https://github.com/meescool/TheCatWars" target="_blank">Github link</a>
+        <p class="projectSub">features</p>
+        <ul>
+          <li>Has a GUI developed with the Java Swing library.</li>
+          <li>Checks user input.</li>
+          <li>Makes use of OOP concepts.</li>
+          <li>Has a resource folder with appropriate build paths.</li>
+        </ul>
+        <p class="projectSub">code snippet</p>
+        <div class="codesnip">
+
+          <p> JMenuItem helpItem = new JMenuItem("&lt;html> &lt;div style='color:white;'>Help");</p>
+          <p>JMenuItem newGameItem = new JMenuItem("&lt;html>
+            &lt;div style='color:white;'>New Game");</p>
+          <p>JMenuItem quitMenuItem = new JMenuItem("&lt;html>
+            &lt;div style='color:white;'>Quit");</p>
+
+          <p>ArrayList&lt;JMenuItem> menuItems = new ArrayList&lt;JMenuItem>(Arrays.asList(helpItem, newGameItem, quitMenuItem));</p>
+
+          <p style="color:#A6B1E1">// iterate through the menu items for cleaner code</p>
+          <p>menuItems.forEach(item -> {</p>
+
+          <p>item.setOpaque(true);</p>
+          <p>item.setBackground(new Color(255, 150, 96));</p>
+          <p>item.setBorder(null);</p>
+          <p>demoMenu.add(item);</p>
+          <p>item.addMouseListener(new Mouse());</p>
+          <p>}); </p>
+
+
+
+        </div>
+        <div class="sampleRun">
+          <p class="projectSub">sample run</p>
+
+          <img src="../img/catwarsRun.gif" alt="sample run">
+
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+  <!--end of body class-->
+</body>
+<footer>
+  <div class="parallelBunnyF">
+    <div class="footer">
+      <ul>
+        <li><a href="../aboutMe.html">about me</a></li>
+        <li><a href="../programming.html">programming</a></li>
+
+        <li><a href="../illustration.html">design and illustration</a></li>
+        <li><a href="../contact.html">contact</a></li>
+
+      </ul>
+
+
+      <p>Copyright &#169; 2020 Marcela Estrada</p>
+    </div>
+  </div>
+
+</footer>
+
+</html>

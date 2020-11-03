@@ -521,6 +521,11 @@ nav li a:hover {
   justify-content: center;
 }
 
+.sampleArt img {
+  border-radius: 2em;
+  max-width: 700px;
+}
+
 footer .parallelBunnyF {
   margin-top: 3em;
   color: white;

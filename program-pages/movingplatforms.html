@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marcela Estrada | Programming: Moving Platforms</title>
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="shortcut icon" href="../img/wizardME.png">
+
+
+
+</head>
+
+<body>
+  <div class="parallelBunny">
+    <div class="icon"><a href="../index.html">
+        <img src="../img/wizardME.png">
+      </a>
+    </div>
+  </div>
+  <div class="body">
+
+    <header>
+
+      <!-- <div class="icon"><a href="../index.html">
+          <img src="../img/wizardME.png">
+        </a>
+      </div> -->
+
+      <nav>
+        <ul>
+          <li><a href="../aboutMe.html">about me</a></li>
+          <li><a href="../programming.html">programming</a></li>
+
+          <li><a href="../illustration.html">design and illustration</a></li>
+          <li><a href="../contact.html">contact</a></li>
+
+        </ul>
+      </nav>
+
+    </header>
+    <div class="container">
+
+      <div class="arrows">
+        <a href="bestfriend.html" title="Best Friend Path">
+          <p>
+            < </p>
+        </a>
+        <p class="arrowsTitle">programming projects</p>
+        <a href="tacosmore.html" title="Tacos and More">
+          <p> > </p>
+        </a>
+      </div>
+
+      <div class="programSummary">
+        <p id="projectTitle">Moving Platforms</p>
+        <p class="projectSub">Javascript * WebGL</p>
+        <p>A 3D graphics program that makes use of the WebGL API and Three JS library.</p>
+        <a href="https://github.com/meescool/MovingPlatforms" target="_blank">Github link</a>
+        <p class="projectSub">features</p>
+        <ul>
+          <li>Textures that I created with Krita.</li>
+          <li>Allows user input.</li>
+          <li>Physics and animation.</li>
+        </ul>
+        <p class="projectSub">code snippet</p>
+        <div class="codesnip">
+          <p style="color:#A6B1E1">// creating the character in the game</p>
+          <p>function makeBall(w, h, d, materialBall, x, y, z) {</p>
+          <p>&nbsp;&nbsp;var geometryBall = new THREE.SphereGeometry(w, h,d);</p>
+          <p>&nbsp;&nbsp;const ball = new THREE.Mesh(geometryBall, materialBall);</p>
+          <p>&nbsp;&nbsp;ball.position.x = x;</p>
+          <p>&nbsp;&nbsp;ball.position.y = y;</p>
+          <p>&nbsp;&nbsp;ball.position.z = z;</p>
+          <p>&nbsp;&nbsp;ball.castShadow = true;</p>
+          <p>&nbsp;&nbsp;ball.receiveShadow = true;</p>
+          <p>&nbsp;&nbsp;scene.add(ball);</p>
+          <p>&nbsp;&nbsp;return ball;</p>
+          <p>}</p>
+        </div>
+        <div class="sampleRun">
+          <p class="projectSub">sample run</p>
+
+          <img src="../img/movingplatformsRun.gif" alt="sample run">
+
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+  <!--end of body class-->
+</body>
+<footer>
+  <div class="parallelBunnyF">
+    <div class="footer">
+      <ul>
+        <li><a href="../aboutMe.html">about me</a></li>
+        <li><a href="../programming.html">programming</a></li>
+
+        <li><a href="../illustration.html">design and illustration</a></li>
+        <li><a href="../contact.html">contact</a></li>
+
+      </ul>
+
+
+      <p>Copyright &#169; 2020 Marcela Estrada</p>
+    </div>
+  </div>
+
+</footer>
+
+</html>

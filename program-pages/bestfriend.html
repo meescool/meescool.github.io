@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marcela Estrada | Programming: Best Friend Path</title>
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="shortcut icon" href="../img/wizardME.png">
+
+
+
+</head>
+
+<body>
+  <div class="parallelBunny">
+    <div class="icon"><a href="../index.html">
+        <img src="../img/wizardME.png">
+      </a>
+    </div>
+  </div>
+  <div class="body">
+
+    <header>
+
+      <!-- <div class="icon"><a href="../index.html">
+          <img src="../img/wizardME.png">
+        </a>
+      </div> -->
+
+      <nav>
+        <ul>
+          <li><a href="../aboutMe.html">about me</a></li>
+          <li><a href="../programming.html">programming</a></li>
+
+          <li><a href="../illustration.html">design and illustration</a></li>
+          <li><a href="../contact.html">contact</a></li>
+
+        </ul>
+      </nav>
+
+    </header>
+    <div class="container">
+
+      <div class="arrows">
+        <a href="catwars.html" title="Cat Wars">
+          <p>
+            < </p>
+        </a>
+        <p class="arrowsTitle">programming projects</p>
+        <a href="movingplatforms.html" title="Moving Platforms">
+          <p> > </p>
+        </a>
+      </div>
+
+      <div class="programSummary">
+        <p id="projectTitle">Best Friend Path</p>
+        <p class="projectSub">Java</p>
+        <p>For this program I was tasked to code a console program that would get the best path from a given set of friends arranged on a map.</p>
+        <a href="https://github.com/meescool/BestFriendPath" target="_blank">Github link</a>
+        <p class="projectSub">features</p>
+        <ul>
+          <li>Checks and handles user input.</li>
+          <li>Makes use of dynamic code.</li>
+          <li>Nice console output</p>
+          <li>Efficiently uses an arrayList to make use of less space and time.</li>
+        </ul>
+        <p class="projectSub">code snippet</p>
+        <div class="codesnip">
+          <p>static void selectPath(String name) {</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;Random r = new Random();
+            <span style="color:#A6B1E1">// declaring a random for choosing which of the paths to use when they are equal</span>
+          </p>
+
+          <p style="color:#A6B1E1">&nbsp;&nbsp;&nbsp;&nbsp;/*</p>
+          <p style="color:#A6B1E1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* since I'm only using one data structure, and the array list is indexed and</p>
+          <p style="color:#A6B1E1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* already in order I can traverse the array from front to back or from back to</p>
+          <p style="color:#A6B1E1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* front. therefore I'm using the index of the friend in order to determine</p>
+          <p style="color:#A6B1E1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* whether it takes longer to go from "front to back" or back to front" this is</p>
+          <p style="color:#A6B1E1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* faster then having to traverse both front to back and back to front and</p>
+          <p style="color:#A6B1E1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* comparing the sizes</p>
+          <p style="color:#A6B1E1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;if (friendNum &lt; (friends.size()) - friendNum) {</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text(name);</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;forward(name);</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;} else if (friendNum > ((friends.size()) - friendNum)) {</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text(name);</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;backward(name);</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;} else {</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("\n Path 1 and Path 2 are equal!");</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text(name);</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int choice = r.nextInt(10) + 1;</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (choice % 2 == 0) {
+            <span style="color:#A6B1E1">// totally random choice</span>
+          </p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;forward(name);</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;} else {</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;backward(name);</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+
+          <p>}</p>
+
+
+
+        </div>
+        <div class="sampleRun">
+          <p class="projectSub">sample run</p>
+
+          <img src="../img/bestfriendRun.gif" alt="sample run">
+
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+  <!--end of body class-->
+</body>
+<footer>
+  <div class="parallelBunnyF">
+    <div class="footer">
+      <ul>
+        <li><a href="../aboutMe.html">about me</a></li>
+        <li><a href="../programming.html">programming</a></li>
+
+        <li><a href="../illustration.html">design and illustration</a></li>
+        <li><a href="../contact.html">contact</a></li>
+
+      </ul>
+
+
+      <p>Copyright &#169; 2020 Marcela Estrada</p>
+    </div>
+  </div>
+
+</footer>
+
+</html>

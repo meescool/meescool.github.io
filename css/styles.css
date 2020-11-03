@@ -215,8 +215,8 @@ nav li a:hover {
 
 .container {
   margin: 0 auto;
-  margin-top: 3em;
-  line-height: 1em;
+  margin-top: 4em;
+  line-height: 1.5em;
   max-width: 96%;
   /* position: absolute; */
 }
@@ -232,11 +232,11 @@ nav li a:hover {
 .container h1 {
   margin: 0 auto;
   text-align: center;
-  font-size: 2em;
-  line-height: normal;
+  font-size: 3em;
   width: 60%;
-  line-height: 2em;
+  line-height: 1.2em;
   font-family: var(titleFont);
+  padding: 1em;
 }
 
 .parallelBunny {
@@ -329,6 +329,7 @@ nav li a:hover {
   flex-flow: wrap;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 1em;
 }
 
 .box {
@@ -511,6 +512,13 @@ nav li a:hover {
   font-size: 0.9em;
   text-align: left;
   padding-left: 1em;
+}
+
+.sampleRun {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 footer .parallelBunnyF {

@@ -69,18 +69,23 @@ header {
   width: 7em;
   height: 7em;
   margin: 1em;
-  background-color: white;
-  border-radius: 3em 0 3em 0;
-  transition: border-radius 0.25s;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0px 0px 7px 5px rgba(0, 0, 0, 0.3);
+  padding: 0.5em;
+  border-radius: 5em;
+  transition: background-color 0.25s, box-shadow .25s;
   align-self: flex-start;
 }
 
 .icon2 a img:hover {
-  border-radius: 0 3em 0 3em;
+  box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0);
+  background: white;
 }
 
 .icon a img:hover {
-  border-radius: 0 3em 0 3em;
+  /* border-radius: 0 0em 0 0em; */
+  box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0);
+  background: white;
 }
 
 .iconP {
@@ -137,12 +142,14 @@ header {
 }
 
 .icon a img {
-  width: 6em;
+  width: 7em;
   margin: 1em;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0px 0px 7px 5px rgba(0, 0, 0, 0.3);
   padding: 0.5em;
-  border-radius: 3em 0 3em 0;
-  transition: border-radius 0.25s;
+  border-radius: 5em;
+  align-self: center;
+  transition: background-color 0.25s, box-shadow .25s;
 }
 
 nav ul {

@@ -55,50 +55,59 @@
           <p> > </p>
         </a>
       </div>
+      <!-- transition effect -->
+      <div data-barba="wrapper">
+        <div data-barba="container" data-barba-namespace="page-a">
 
-      <div class="programSummary">
-        <p id="projectTitle">Cat Wars</p>
-        <p class="projectSub">Java</p>
-        <p>Cat Wars is an ongoing turn-based game, where two users choose a player. There is error checking so that users don't play the same player.</p>
-        <a href="https://github.com/meescool/TheCatWars" target="_blank">Github link</a>
-        <p class="projectSub">features</p>
-        <ul>
-          <li>Has a GUI developed with the Java Swing library.</li>
-          <li>Checks user input.</li>
-          <li>Makes use of OOP concepts.</li>
-          <li>Has a resource folder with appropriate build paths.</li>
-        </ul>
-        <p class="projectSub">code snippet</p>
-        <div class="codesnip">
+          <!-- start of program summary -->
 
-          <p> JMenuItem helpItem = new JMenuItem("&lt;html> &lt;div style='color:white;'>Help");</p>
-          <p>JMenuItem newGameItem = new JMenuItem("&lt;html>
-            &lt;div style='color:white;'>New Game");</p>
-          <p>JMenuItem quitMenuItem = new JMenuItem("&lt;html>
-            &lt;div style='color:white;'>Quit");</p>
+          <div class="programSummary">
+            <p id="projectTitle">Cat Wars</p>
+            <p class="projectSub">Java</p>
+            <p>Cat Wars is an ongoing turn-based game, where two users choose a player. There is error checking so that users don't play the same player.</p>
+            <a href="https://github.com/meescool/TheCatWars" target="_blank">Github link</a>
+            <p class="projectSub">features</p>
+            <ul>
+              <li>Has a GUI developed with the Java Swing library.</li>
+              <li>Checks user input.</li>
+              <li>Makes use of OOP concepts.</li>
+              <li>Has a resource folder with appropriate build paths.</li>
+            </ul>
+            <p class="projectSub">code snippet</p>
+            <div class="codesnip">
 
-          <p>ArrayList&lt;JMenuItem> menuItems = new ArrayList&lt;JMenuItem>(Arrays.asList(helpItem, newGameItem, quitMenuItem));</p>
+              <p> JMenuItem helpItem = new JMenuItem("&lt;html> &lt;div style='color:white;'>Help");</p>
+              <p>JMenuItem newGameItem = new JMenuItem("&lt;html>
+                &lt;div style='color:white;'>New Game");</p>
+              <p>JMenuItem quitMenuItem = new JMenuItem("&lt;html>
+                &lt;div style='color:white;'>Quit");</p>
 
-          <p style="color:#A6B1E1">// iterate through the menu items for cleaner code</p>
-          <p>menuItems.forEach(item -> {</p>
+              <p>ArrayList&lt;JMenuItem> menuItems = new ArrayList&lt;JMenuItem>(Arrays.asList(helpItem, newGameItem, quitMenuItem));</p>
 
-          <p>item.setOpaque(true);</p>
-          <p>item.setBackground(new Color(255, 150, 96));</p>
-          <p>item.setBorder(null);</p>
-          <p>demoMenu.add(item);</p>
-          <p>item.addMouseListener(new Mouse());</p>
-          <p>}); </p>
+              <p style="color:#A6B1E1">// iterate through the menu items for cleaner code</p>
+              <p>menuItems.forEach(item -> {</p>
+
+              <p>item.setOpaque(true);</p>
+              <p>item.setBackground(new Color(255, 150, 96));</p>
+              <p>item.setBorder(null);</p>
+              <p>demoMenu.add(item);</p>
+              <p>item.addMouseListener(new Mouse());</p>
+              <p>}); </p>
 
 
 
-        </div>
-        <div class="sampleRun">
-          <p class="projectSub">sample run</p>
+            </div>
+            <div class="sampleRun">
+              <p class="projectSub">sample run</p>
 
-          <img src="../img/catwarsRun.gif" alt="sample run">
+              <img src="../img/catwarsRun.gif" alt="sample run">
 
+            </div>
+          </div>
+          <!-- end of program summary  -->
         </div>
       </div>
+      <!-- end of js effect -->
 
     </div>
 
@@ -124,5 +133,9 @@
   </div>
 
 </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
+<script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
+<script src="../js/app.js"></script>
 
 </html>

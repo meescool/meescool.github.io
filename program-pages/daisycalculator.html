@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Marcela Estrada | Programming: Moving Platforms</title>
+  <title>Marcela Estrada | Programming: Daisy Calculator</title>
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="shortcut icon" href="../img/wizardME.png">
@@ -46,55 +46,70 @@
     <div class="container">
 
       <div class="arrows">
-        <a href="bestfriend.html" title="Best Friend Path">
+        <a href="movingplatforms.html" title="Moving Platforms">
           <p>
             < </p>
         </a>
         <p class="arrowsTitle">programming projects</p>
-        <a href="daisycalculator.html" title="Daisy Calculator">
+        <a href="tacosmore.html" title="Tacos and More">
           <p> > </p>
         </a>
       </div>
-
       <!-- transition effect -->
       <div data-barba="wrapper">
         <div data-barba="container" data-barba-namespace="page-a">
 
           <!-- start of program summary -->
+
           <div class="programSummary">
-            <p id="projectTitle">Moving Platforms</p>
-            <p class="projectSub">Javascript * WebGL</p>
-            <p>A 3D graphics program that makes use of the WebGL API and Three JS library.</p>
-            <a href="https://github.com/meescool/MovingPlatforms" target="_blank">Github link</a>
+            <p id="projectTitle">Daisy Calculator</p>
+            <p class="projectSub">Python</p>
+            <p>This program is a calculator that can do simple math equations. It also handles user input and does error checking.</p>
+            <a href="https://github.com/meescool/daisyCalculator" target="_blank">Github link</a>
             <p class="projectSub">features</p>
             <ul>
-              <li>Textures that I created with Krita.</li>
-              <li>Allows user input.</li>
-              <li>Physics and animation.</li>
+              <li>Has a GUI developed with the Tkinter library.</li>
+              <li>Checks user input.</li>
             </ul>
             <p class="projectSub">code snippet</p>
             <div class="codesnip">
-              <p style="color:#A6B1E1">// creating the character in the game</p>
-              <p>function makeBall(w, h, d, materialBall, x, y, z) {</p>
-              <p>&nbsp;&nbsp;var geometryBall = new THREE.SphereGeometry(w, h,d);</p>
-              <p>&nbsp;&nbsp;const ball = new THREE.Mesh(geometryBall, materialBall);</p>
-              <p>&nbsp;&nbsp;ball.position.x = x;</p>
-              <p>&nbsp;&nbsp;ball.position.y = y;</p>
-              <p>&nbsp;&nbsp;ball.position.z = z;</p>
-              <p>&nbsp;&nbsp;ball.castShadow = true;</p>
-              <p>&nbsp;&nbsp;ball.receiveShadow = true;</p>
-              <p>&nbsp;&nbsp;scene.add(ball);</p>
-              <p>&nbsp;&nbsp;return ball;</p>
-              <p>}</p>
+
+              <p>def set_operations(n):</p>
+              <p>'''</p>
+              <p>This function sets the operations</p>
+
+              <p>:param n: value</p>
+              <p>:type n: int or char</p>
+
+              <p>:return: no value</p>
+              <p>:rtype: none</p>
+              <p>'''</p>
+              <p>&nbsp;&nbsp;&nbsp;if (len(user_in)==0 and len(numbers)==0):</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label.configure(text="Enter numbers please!")</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return</p>
+              <p>&nbsp;&nbsp;&nbsp;if (len(user_in)==0):</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label.configure(text="Enter numbers please!")</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return</p>
+              <p>&nbsp;&nbsp;&nbsp;coef=""</p>
+              <p>&nbsp;&nbsp;&nbsp;for i in user_in:</p>
+              <p>&nbsp;&nbsp;&nbsp;coef = coef + i</p>
+              <p>&nbsp;&nbsp;&nbsp;numbers.append(coef)</p>
+              <p>&nbsp;&nbsp;&nbsp;numbers.append(n)</p>
+              <p>&nbsp;&nbsp;&nbsp;label.configure(text=n)</p>
+              <p>&nbsp;&nbsp;&nbsp;user_in.clear()</p>
+              <p>&nbsp;&nbsp;&nbsp;return</p>
+
+
+
             </div>
             <div class="sampleRun">
               <p class="projectSub">sample run</p>
 
-              <img src="../img/movingplatformsRun.gif" alt="sample run">
+              <img src="../img/daisyCalculatorRun.gif" alt="sample run">
 
             </div>
           </div>
-          <!-- end of program summary -->
+          <!-- end of program summary  -->
         </div>
       </div>
       <!-- end of js effect -->

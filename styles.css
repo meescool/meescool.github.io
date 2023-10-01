@@ -1,0 +1,11 @@
+/**
+* Setting global vars here
+*/
+:root {
+--primaryColor: black;
+--secondaryColor: white;
+--tertiaryColor: pink;
+}
+h1 {
+    color: var(--tertiaryColor);
+}

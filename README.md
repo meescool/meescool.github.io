@@ -1,2 +1,2 @@
-# meescool.gihub.io
+# meescool.github.io
 My website

@@ -1,0 +1,75 @@
+/**
+* Setting global vars here
+*/
+:root {
+--primaryColor: black;
+--secondaryColor: white;
+--tertiaryColor: pink;
+--color1: #000424;
+--color2: #162292;
+--color3: #18DCD0;
+--color4: #DAFFED;
+--colro: #1259C5;
+}
+
+body{
+    background-color: var(--color1);
+    margin: 0 auto;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+h1 {
+    font-size: 6rem;
+    line-height: 6rem;
+    color: white;
+    font-weight: bold;
+}
+section {
+    box-sizing: border-box;
+    margin: 0 auto;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+section div.section-container {
+    display: flex;
+    margin: 0 auto;
+    min-width: 1000px;
+}
+
+/* the hero section of the website*/
+section.hero {
+    background-color: var(--color2);
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 30%;
+    box-shadow: inset 0rem -1rem var(--color3), 0 1rem var(--color1),  0 2rem var(--color2),  0 3.5rem var(--color1), 0 4rem var(--color2);
+
+    overflow: hidden;
+    background-attachment: fixed;
+    background-size: 80;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-image: url("src/img/web.svg");
+
+}
+
+section .hero-img {
+    width: 40%;
+    animation: float 20s ease-in-out 0.1s forwards;
+}
+
+.hero-img img {
+    width: 100%;
+    max-width: 100%;
+}
+
+@keyframes float {
+    0% {
+        transform: scale(1000%);
+    }
+    30% {
+        transform: scale(100%, 100%) rotate(-40deg);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}

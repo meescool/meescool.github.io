@@ -1,3 +1,3 @@
 # meescool.github.io
 My website
-Link: [](https://meescool.github.io/)
+Link: https://meescool.github.io/

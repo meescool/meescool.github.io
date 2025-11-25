@@ -21,7 +21,7 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  gap: 10rem;
+  gap: 5rem;
 }
 
 header {
@@ -70,8 +70,8 @@ h2 {
 p {
   font-size: 1.5rem;
   color: white;
-  font-weight: bold;
   margin: 0;
+  font-family:'Courier New', Courier, monospace;
 }
 
 section {
@@ -80,12 +80,11 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
-  max-width: 80vw;
+  max-width: 900px;
   min-height: 100vh;
   gap: 1rem;
-
+  padding-top: 5rem;
 }
 
 .thumbnail {
@@ -133,24 +132,75 @@ section {
     transform-origin: right;
 }
 
+.sketchbook-gallery .item {
+  display: grid;
+  grid-template-rows: 1fr 6rem;
+  background-color: white;
+}
+.sketchbook-gallery h2, .sketchbook-gallery p {
+  color: var(--color1);
+}
+.sketchbook-gallery{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+.sketchbook-gallery .item img{
+  padding: 0.5rem;
+}
+.sketchbook-gallery .item:nth-child(3n+2){
+  transform: rotate(-2deg);
+}
+.sketchbook-gallery .item:nth-child(3n+1),.sketchbook-gallery .item:nth-child(3n+3){
+  transform: rotate(2deg);
+}
+
+.sketchbook-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background-color: rgba(1, 1, 37, 0.774);
+  backdrop-filter: blur(6px);
+}
+.sketchbook-modal div {
+  position: fixed;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  inset: 4rem;
+}
+
 
 
 
 /* the hero section of the website*/
 section.hero {
-  flex-direction: row;
-  min-height: calc(100vh - 4rem);
+  flex-direction: column;
+  /* min-height: calc(100vh - 4rem); */
+}
+section.hero div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 section .grass {
-  position: absolute;
-  height: 4rem;
+  height: 10rem;
   width: 100vw;
-  background-color: var(--color3);
+  background: linear-gradient(#1c0040, transparent) ;
+  /* box-shadow: 0 65px 50px #1c0040; */
+  inset: 0;
+  top: unset;
   bottom: 0;
 }
 section.hero h1 .my-name {
-  font-size: 6rem;
+  font-size: 7rem;
   font-weight: bolder;
+}
+section.hero img {
+  align-self: flex-end;
+  margin-bottom: -1rem;
 }
 
 @keyframes float {
@@ -171,38 +221,53 @@ section.hero h1 .my-name {
   }
 }
 
+@keyframes size {
+  from{
+        border-radius: 30vh;
+
+  }
+
+}
+
+
+
 
 
 /* 2 */
 .golden-me {
-  height: 100%;
   width: 100vw;
+  height: 60vh;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(4, calc(100%/4));
-  grid-gap: 1vw;
+  grid-gap: 0.5vw;
   margin: 4rem 0;
-  max-height: 100vh;
-  height: 80vh;
+  background-color: #1259c5;
+  padding: 0.5vw 10vw;
+
+}
+.golden-me.small {
+    height: 30vh;
 }
 
 .golden-me div {
-    border-radius: 7vw;
     overflow: hidden;
+    animation: size 6000ms cubic-bezier(0.165, 0.84, 0.44, 1) infinite alternate;
 }
 
 .golden-me div span {
   background-image: linear-gradient(rgba(40, 34, 219, 0.9)),
     url("../img/me.png");
-  background-position: top;
+  background-position: center top;
   background-size: cover;
   background-attachment: fixed;
-  background-blend-mode: color-dodge;
-  /* filter: blur(3px) hue-rotate(-50deg); */
+  background-blend-mode:lighten;
+  /* filter: blur(3px) hue-rotate(-40deg) opacity(0.1); */
   width: 140%;
   height: 140%;
   display: block;
     transition: all 200ms ease-in;
+        animation: blur 3000ms cubic-bezier(0.165, 0.84, 0.44, 1) infinite alternate-reverse;
+
       /* animation: hue 2s linear infinite alternate; */
 
   /* transition: box-shadow 200ms ease-in; */

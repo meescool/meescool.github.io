@@ -29,6 +29,7 @@ header {
   top: 0;
   background: white;
   height: 4rem;
+  z-index: 1;
 }
 nav ul {
   display: flex;
@@ -82,7 +83,6 @@ section {
   align-items: center;
   text-align: center;
   max-width: 900px;
-  min-height: 100vh;
   gap: 1rem;
   padding-top: 5rem;
 }
@@ -96,7 +96,7 @@ section {
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1vw;
+  grid-gap: 1rem;
   margin: 4rem 0;
 }
 .gallery img {
@@ -110,8 +110,10 @@ section {
   /* box-shadow: 0rem 0rem var(--color3); */
 }
 .gallery figure img:hover {
-  box-shadow: 0rem 0rem 0rem 2vw var(--color3);
-  transform: scale(110%);
+  box-shadow: 0rem 0rem 0rem 0.5rem var(--color3);
+  transform: scale(102%);
+
+  z-index: 1;
 }
 .gallery figure:nth-child(3n+1) img {
   border-radius: 0 4vw 4vw 0%;
@@ -124,12 +126,12 @@ section {
 }
 
 .gallery figure:nth-child(3n+1) img:hover {
-  transform-origin:  left;
+  /* transform-origin:  left; */
 }
 .gallery figure:nth-child(3n+2) img:hover {
 }
 .gallery figure:nth-child(3n+3) img:hover {
-    transform-origin: right;
+    /* transform-origin: right; */
 }
 
 .sketchbook-gallery .item {
@@ -180,10 +182,11 @@ section.hero {
   flex-direction: column;
   /* min-height: calc(100vh - 4rem); */
 }
-section.hero div:first-child {
+section.hero div:nth-child(2) {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 4rem 0;
 }
 section .grass {
   height: 10rem;
@@ -202,6 +205,31 @@ section.hero img {
   align-self: flex-end;
   margin-bottom: -1rem;
 }
+
+.cloud {
+ height: max-content;
+ position: relative;
+ margin-bottom: 1rem;
+ padding: 3rem ;
+}
+.cloud img {
+ width: 100%;
+}
+.cloud img:nth-child(2),.cloud img:nth-child(3){
+  position: absolute;
+  width: 40%;
+  top: 80%;
+}
+.cloud img:nth-child(2){
+  inset-inline-end: 0;
+
+}
+
+.cloud img:nth-child(3){
+  inset-inline-start: 0;
+}
+
+
 
 @keyframes float {
   0% {
@@ -236,12 +264,12 @@ section.hero img {
 /* 2 */
 .golden-me {
   width: 100vw;
-  height: 60vh;
+  height: calc(100vw * 1/(16/9));
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 0.5vw;
   margin: 4rem 0;
-  background-color: #1259c5;
+  background-color: var(--color3);
   padding: 0.5vw 10vw;
 
 }
@@ -265,8 +293,8 @@ section.hero img {
   width: 140%;
   height: 140%;
   display: block;
-    transition: all 200ms ease-in;
-        animation: blur 3000ms cubic-bezier(0.165, 0.84, 0.44, 1) infinite alternate-reverse;
+  transition: all 200ms ease-in;
+  animation: blur 3000ms cubic-bezier(0.165, 0.84, 0.44, 1) infinite alternate-reverse;
 
       /* animation: hue 2s linear infinite alternate; */
 

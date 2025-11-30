@@ -6,6 +6,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Marcela Estrada | Website</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
     <link rel="stylesheet" href="src/css/reset-styles.css" />
     <link rel="stylesheet" href="src/css/styles.css" />
   </head>
@@ -27,6 +28,7 @@
             <a href="./src/sketchbook.html">sketchbook</a>
           </li>
         </ul>
+        <button id="menuToggle" aria-pressed="false">menu</button>
       </nav>
     </header>
     <main>
@@ -51,8 +53,31 @@
         <p>
           Hi there! Thanks for visiting my website. I'm a developer and
           illustrator based in the US. I love the act of creating and found a
-          sweet spot between art and code. Currently I am a midlevel software
-          engineer, primarily focused on the front end.
+          sweet spot between art and code.
+          <br />
+          Currently I work as a front-end engineer, working on story-telling and
+          mapping applications.
+        </p>
+        <br />
+        <h3>Some history...</h3>
+        <p>
+          I've always gravitated towards drawing and coloring since I was child,
+          and at some point I got really into running so I figured my career
+          might involve one of those two (I figured really soon that I'm
+          naturally slow so that was off the table pretty fast).
+        </p>
+        <p>
+          One of my oldest memories about coding was back when I was about 16. I
+          was studying Informatics at a technical college in Mexico, and I
+          remember my professor demoing a program that involved a door opening
+          and closing in visual. I thought it was neat that we could program
+          things that people could see.
+        </p>
+        <p>
+          Once in college, I did switch majors a few times and eventually
+          graduated with a B.S. in Sciences with majors in Art/Graphic Design
+          and Computer Science. For work I knew I wanted to do something that
+          combined the two in some way, and found that in front-end development.
         </p>
 
         <figure class="golden-me">
@@ -69,8 +94,13 @@
         <img class="thumbnail" src="./src/img/wizardCoder.svg" />
         <h2>dev stuff</h2>
         <p>
-          I primarily work with React, Typescript and the arcGIS JSSDK at my
-          current job.
+          <br />
+          My specialty is the UI end of things. I primarily work with React,
+          Typescript, CSS and the arcGIS JSSDK at my current job.
+          <br />
+          I work closely with other developers, product engineers and designers
+          to bring an idea to life, fix pesky bugs, improve accesibility, or to
+          share knowledge that will help the team.
         </p>
       </section>
 
@@ -78,8 +108,13 @@
         <img class="thumbnail" src="./src/img/wizardArtist.svg" />
         <h2>art</h2>
         <p>
-          This is something that has definitely helped inform my trajectory in
-          tech.
+          I've dabbled in many mediums, and I like to think I have built an eye
+          for color and composition. There are areas I would love to improve on
+          but I've gotten to the point where I am happy with my current skill
+          level and overall enjoy the process of creating.
+          <br />
+          It's also something that I'm proud of, think it looks good and will
+          obviously show off on my personal website, lol.
         </p>
         <div class="gallery">
           <figure>
@@ -113,4 +148,5 @@
   <footer>
     <p>copy right 2025</p>
   </footer>
+  <script src="./src/js/index.js"></script>
 </html>

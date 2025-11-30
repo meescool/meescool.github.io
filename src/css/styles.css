@@ -137,7 +137,7 @@ section {
   height: 100%;
   width: 100vw;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
   margin: 4rem 0;
 }
@@ -157,23 +157,12 @@ section {
 
   z-index: 1;
 }
-.gallery figure:nth-child(3n + 1) img {
+.gallery figure:nth-child(2n + 1) img {
   border-radius: 0 4vw 4vw 0%;
 }
-.gallery figure:nth-child(3n + 2) img {
-  border-radius: 4vw;
-}
-.gallery figure:nth-child(3n + 3) img {
-  border-radius: 4vw 0 0 4vw;
-}
 
-.gallery figure:nth-child(3n + 1) img:hover {
-  /* transform-origin:  left; */
-}
-.gallery figure:nth-child(3n + 2) img:hover {
-}
-.gallery figure:nth-child(3n + 3) img:hover {
-  /* transform-origin: right; */
+.gallery figure:nth-child(2n) img {
+  border-radius: 4vw 0 0 4vw;
 }
 
 .sketchbook-gallery .item {
@@ -426,25 +415,40 @@ section.hero img {
   }
 
   h1 {
-  font-size: 3rem;
-}
+    font-size: 3rem;
+  }
 
-h2 {
-  font-size: 2.5rem;
-  line-height: 1.5;
-}
+  h2 {
+    font-size: 2.5rem;
+    line-height: 1.5;
+  }
 
-h3 {
-  font-size: 1.7rem;
-  line-height: 1.5;
-}
+  h3 {
+    font-size: 1.7rem;
+    line-height: 1.5;
+  }
 
-p {
-  font-size: 1.5rem;
-  line-height: 1.5;
-}
+  p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
 
-section.hero h1 .my-name {
-  font-size: 7rem;
-}
+  section.hero h1 .my-name {
+    font-size: 7rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .gallery figure:nth-child(4n + 1) img {
+    border-radius: 0 4vw 4vw 0%;
+  }
+  .gallery figure:nth-child(4n + 2) img,
+  .gallery figure:nth-child(4n + 3) img {
+    border-radius: 4vw;
+  }
+  .gallery figure:nth-child(4n + 4) img {
+    border-radius: 4vw 0 0 4vw;
+  }
 }

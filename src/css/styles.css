@@ -31,8 +31,31 @@ header {
   height: 4rem;
   z-index: 1;
 }
+nav {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 100%;
+  justify-content: center;
+}
+nav button {
+  background: white;
+  border: none;
+  font-size: 2rem;
+  color: var(--color2);
+  margin: 0 auto;
+  height: 100%;
+}
+nav.mobile-open ul {
+  display: flex;
+}
+nav:not(.mobile-open) ul {
+  display: none;
+}
 nav ul {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: max-content;
@@ -40,9 +63,14 @@ nav ul {
   gap: 2rem;
   font-size: 2rem;
   padding: 0;
+  background-color: white;
 }
 nav ul li {
   margin: 0.5rem 1rem;
+}
+
+br {
+  line-height: 2.5;
 }
 
 a {
@@ -57,22 +85,34 @@ a:hover {
 }
 
 h1 {
-  font-size: 3rem;
-  color: white;
-  margin: 0;
-}
-
-h2 {
   font-size: 2rem;
   color: white;
   margin: 0;
 }
 
-p {
-  font-size: 1.5rem;
+h2 {
+  font-size: 1.7rem;
   color: white;
   margin: 0;
-  font-family:'Courier New', Courier, monospace;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 1.6rem;
+  width: 100%;
+  color: white;
+  margin: 0;
+  line-height: 1.5;
+  text-align: start;
+}
+
+p {
+  font-size: 1.3rem;
+  color: white;
+  margin: 0;
+  font-family: monospace;
+  line-height: 1.5;
+  text-align: start;
 }
 
 section {
@@ -84,6 +124,8 @@ section {
   text-align: center;
   max-width: 900px;
   gap: 1rem;
+  width: 100%;
+  padding: 1.5rem;
   padding-top: 5rem;
 }
 
@@ -115,23 +157,23 @@ section {
 
   z-index: 1;
 }
-.gallery figure:nth-child(3n+1) img {
+.gallery figure:nth-child(3n + 1) img {
   border-radius: 0 4vw 4vw 0%;
 }
-.gallery figure:nth-child(3n+2) img {
+.gallery figure:nth-child(3n + 2) img {
   border-radius: 4vw;
 }
-.gallery figure:nth-child(3n+3) img {
+.gallery figure:nth-child(3n + 3) img {
   border-radius: 4vw 0 0 4vw;
 }
 
-.gallery figure:nth-child(3n+1) img:hover {
+.gallery figure:nth-child(3n + 1) img:hover {
   /* transform-origin:  left; */
 }
-.gallery figure:nth-child(3n+2) img:hover {
+.gallery figure:nth-child(3n + 2) img:hover {
 }
-.gallery figure:nth-child(3n+3) img:hover {
-    /* transform-origin: right; */
+.gallery figure:nth-child(3n + 3) img:hover {
+  /* transform-origin: right; */
 }
 
 .sketchbook-gallery .item {
@@ -139,21 +181,23 @@ section {
   grid-template-rows: 1fr 6rem;
   background-color: white;
 }
-.sketchbook-gallery h2, .sketchbook-gallery p {
+.sketchbook-gallery h2,
+.sketchbook-gallery p {
   color: var(--color1);
 }
-.sketchbook-gallery{
+.sketchbook-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
 }
-.sketchbook-gallery .item img{
+.sketchbook-gallery .item img {
   padding: 0.5rem;
 }
-.sketchbook-gallery .item:nth-child(3n+2){
+.sketchbook-gallery .item:nth-child(3n + 2) {
   transform: rotate(-2deg);
 }
-.sketchbook-gallery .item:nth-child(3n+1),.sketchbook-gallery .item:nth-child(3n+3){
+.sketchbook-gallery .item:nth-child(3n + 1),
+.sketchbook-gallery .item:nth-child(3n + 3) {
   transform: rotate(2deg);
 }
 
@@ -174,9 +218,6 @@ section {
   inset: 4rem;
 }
 
-
-
-
 /* the hero section of the website*/
 section.hero {
   flex-direction: column;
@@ -187,18 +228,23 @@ section.hero div:nth-child(2) {
   flex-direction: column;
   align-items: center;
   margin: 4rem 0;
+  width: 100%;
 }
+section.hero div:nth-child(2) p {
+  text-align: center;
+}
+
 section .grass {
   height: 10rem;
   width: 100vw;
-  background: linear-gradient(#1c0040, transparent) ;
+  background: linear-gradient(#1c0040, transparent);
   /* box-shadow: 0 65px 50px #1c0040; */
   inset: 0;
   top: unset;
   bottom: 0;
 }
 section.hero h1 .my-name {
-  font-size: 7rem;
+  font-size: 5rem;
   font-weight: bolder;
 }
 section.hero img {
@@ -207,29 +253,27 @@ section.hero img {
 }
 
 .cloud {
- height: max-content;
- position: relative;
- margin-bottom: 1rem;
- padding: 3rem ;
+  height: max-content;
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 3rem;
 }
 .cloud img {
- width: 100%;
+  width: 100%;
 }
-.cloud img:nth-child(2),.cloud img:nth-child(3){
+.cloud img:nth-child(2),
+.cloud img:nth-child(3) {
   position: absolute;
   width: 40%;
   top: 80%;
 }
-.cloud img:nth-child(2){
+.cloud img:nth-child(2) {
   inset-inline-end: 0;
-
 }
 
-.cloud img:nth-child(3){
+.cloud img:nth-child(3) {
   inset-inline-start: 0;
 }
-
-
 
 @keyframes float {
   0% {
@@ -245,41 +289,45 @@ section.hero img {
 
 @keyframes hue {
   to {
-   filter: hue-rotate(-80deg);
+    filter: hue-rotate(-80deg);
   }
 }
 
 @keyframes size {
-  from{
-        border-radius: 30vh;
-
+  from {
+    border-radius: 10vw;
   }
-
 }
 
-
-
-
+@keyframes swipe {
+  from {
+    filter: brightness(0.8) hue-rotate(-60deg) opacity(0);
+  }
+  to {
+    filter: brightness(0) hue-rotate(0) hue-rotate(1);
+  }
+}
 
 /* 2 */
 .golden-me {
   width: 100vw;
-  height: calc(100vw * 1/(16/9));
+  height: calc(100vw * 1 / (16 / 9));
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 0.5vw;
   margin: 4rem 0;
   background-color: var(--color3);
   padding: 0.5vw 10vw;
-
 }
 .golden-me.small {
-    height: 30vh;
+  height: 30vh;
 }
 
 .golden-me div {
-    overflow: hidden;
-    animation: size 6000ms cubic-bezier(0.165, 0.84, 0.44, 1) infinite alternate;
+  overflow: hidden;
+  animation: size 5000ms ease infinite alternate-reverse;
+
+  --delay: 0ms;
 }
 
 .golden-me div span {
@@ -288,15 +336,17 @@ section.hero img {
   background-position: center top;
   background-size: cover;
   background-attachment: fixed;
-  background-blend-mode:lighten;
+  background-blend-mode: lighten;
   /* filter: blur(3px) hue-rotate(-40deg) opacity(0.1); */
   width: 140%;
   height: 140%;
   display: block;
   transition: all 200ms ease-in;
-  animation: blur 3000ms cubic-bezier(0.165, 0.84, 0.44, 1) infinite alternate-reverse;
-
-      /* animation: hue 2s linear infinite alternate; */
+  /* animation: blur 3000ms ease-in-out infinite alternate-reverse; */
+  --pos: 0vw;
+  box-shadow: inset var(--pos) 0px var(--color3);
+  /* animation: hue 2s linear infinite alternate; */
+  animation: swipe 3s linear var(--delay) infinite alternate-reverse;
 
   /* transition: box-shadow 200ms ease-in; */
   /* animation: ripple 2s linear infinite alternate; */
@@ -305,46 +355,96 @@ section.hero img {
   filter: blur(0px) ;
 } */
 
-.golden-me div:nth-child(1)  {
+.golden-me div:nth-child(1) {
   grid-row-start: 1;
   grid-row-end: 5;
   grid-column-start: 1;
   grid-column-end: 3;
   border-start-start-radius: 0;
-  border-end-start-radius:0;
-
+  border-end-start-radius: 0;
+  --delay: 500ms;
 }
-.golden-me div:nth-child(2)  {
+.golden-me div:nth-child(2) {
   grid-row-start: 4;
   grid-row-end: 4;
   grid-column-start: 3;
   grid-column-end: 6;
+  --delay: 1500ms;
 }
-.golden-me div:nth-child(3)  {
-  border-start-end-radius:0;
-              border-end-end-radius:0;
+.golden-me div:nth-child(3) {
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
   grid-row-start: 1;
   grid-row-end: 3;
   grid-column-start: 5;
   grid-column-end: 7;
+  --delay: 400ms;
 }
-.golden-me div:nth-child(4)  {
+.golden-me div:nth-child(4) {
   grid-row-start: 3;
   grid-row-end: 3;
   grid-column-start: 5;
   grid-column-end: 5;
+  --delay: 900ms;
 }
-.golden-me div:nth-child(5)  {
+.golden-me div:nth-child(5) {
   grid-row-start: 1;
   grid-row-end: 4;
   grid-column-start: 3;
   grid-column-end: 5;
+  --delay: 2000ms;
 }
-.golden-me div:nth-child(6)  {
-      border-start-end-radius:0;
-            border-end-end-radius:0;
+.golden-me div:nth-child(6) {
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
   grid-row-start: 3;
   grid-row-end: 5;
   grid-column-start: 6;
   grid-column-end: 6;
+}
+
+@media (width > 800px) {
+  nav button {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    list-style: none;
+    gap: 2rem;
+    font-size: 2rem;
+    padding: 0;
+  }
+  nav:not(.mobile-open) ul {
+    display: flex;
+  }
+  nav ul li {
+    margin: 0.5rem 1rem;
+  }
+
+  h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 1.7rem;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+section.hero h1 .my-name {
+  font-size: 7rem;
+}
 }

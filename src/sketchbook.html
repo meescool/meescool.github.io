@@ -6,6 +6,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Marcela Estrada | Website</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
     <link rel="stylesheet" href="../src/css/reset-styles.css" />
     <link rel="stylesheet" href="../src/css/styles.css" />
   </head>
@@ -15,18 +16,19 @@
       <nav>
         <ul>
           <li>
-            <a href="./../index.html#about">about me</a>
+            <a href="../index.html#about">about me</a>
           </li>
           <li>
-            <a href="./../index.html#art">art</a>
+            <a href="../index.html#art">art</a>
           </li>
           <li>
-            <a href="./../index.html#code">code</a>
+            <a href="../index.html#code">code</a>
           </li>
           <li>
-            <a href="./src/sketchbook.html">sketchbook</a>
+            <a href="#">sketchbook</a>
           </li>
         </ul>
+        <button id="menuToggle" aria-pressed="false">menu</button>
       </nav>
     </header>
     <main>
@@ -55,4 +57,5 @@
   <footer>
     <p>copy right 2025</p>
   </footer>
+  <script src="/src/js/index.js"></script>
 </html>
